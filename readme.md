@@ -1,4 +1,2 @@
-1. Отключил lazy плагин. Поставил  loading="lazy"
-
-
-rm -rf node_modules
+<!-- https://github.com/pashawol/0031Cotage -->
+1. <https://pashawol.github.io/0031Cotage/public>
