@@ -1,10 +1,17 @@
 
 	// start .topLine
 	.topLine {
+		background-color: #ffffff;
+		z-index: 200;
 		.row{
 			align-items: center;
-			padding-top: rem(40);
-			padding-bottom: rem(30);
+			@include media-breakpoint-up(lg) {
+
+				padding-top: rem(40);
+				padding-bottom: rem(30);
+			}
+			padding-top: rem(10);
+			padding-bottom: rem(10);
 			// align-items: flex-end;
 		}
 		
@@ -46,9 +53,21 @@
 	
 	//
 	@include media-breakpoint-down(xl) {}
-	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(lg) {
+		position: sticky;
+		left: 0;
+		top: 0;
+		img{
+			max-width: 100px;
+		}
+		.logo-block{
+			margin-top: 0;
+		}
+	}
 	@include media-breakpoint-down(md) {}
-	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(sm) {
+		
+	}
 	@include media-breakpoint-down(xs) {} 
 
 } // end.topLine
