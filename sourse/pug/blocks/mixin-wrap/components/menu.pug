@@ -1,0 +1,52 @@
+mixin mnu()
+	-
+		var nav= { 
+			"О компании":"#",
+			"Товары":"#",
+			"Акция":"#",
+			"Отзывы":"#" ,
+			"Контакты":"#",
+			} 
+	ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")
+		li.menu-item.menu-item-has-children
+			a(href="#" itemprop="url") Каталог товаров
+			ul.sub-menu
+				-
+					var subnav= { 
+							"Металлопрокат":"#",
+							"Заборы и ограждения":"#",
+							"Пиломатериалы":"#",
+							"Теплоизоляция":"#",
+							"Чердачные лестницы":"#",
+							"Мансардные окна":"#",
+							"Поликарбонат":"#",
+							"Фасадные материалы":"#",
+							"Кровельные материалы":"#",
+							"Террасные покрытия":"#",
+							"Водосточные системы":"#",
+							"Хозблоки и сараи для дачи":"#",
+							"Ламинат":"#", 
+						}
+				each sublinkPatch, sublinkName in subnav
+					li.menu-item(itemprop="item" ): a(href= sublinkPatch itemprop="url")= sublinkName
+		each linkPatch, linkName in nav
+			li.menu-item(itemprop="item" ): a(href= linkPatch itemprop="url")= linkName
+
+//- //- menu
+//- mixin mnu()
+//- 	-
+//- 		var nav= {
+//- 			"Главная":"#sContact",
+//- 			"Услуги  ":"#",
+//- 			"Подбор септика   ":"#",
+//- 			"Акции ":"#",
+//- 			" О компании  ":"#",
+//- 			" Доставка и оплата ":"#",
+//- 			" Клиентам  ":"#",
+//- 			" Наши работы   ":"#",
+//- 			"Контакты ":"#sContact"
+//- 			}
+//- 	+b.UL.navMenu(itemscope itemtype="http://schema.org/SiteNavigationElement")
+//- 		each linkPatch, linkName in nav
+//- 			+e.LI.item( itemprop="item" ): +e.A.link(href= linkPatch  itemprop="url")= linkName
+//- //- /menu

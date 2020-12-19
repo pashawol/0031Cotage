@@ -1,0 +1,28 @@
+mixin sCatalog(data)
+	// start sCatalog
+	+b.SECTION.sCatalog.section#sCatalog&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Какие стройматериалы оптом и в розницу мы предлагаем?
+			ul
+				mixin li(i,t)
+					li
+						a(href="#")
+							.icon-wrap
+								img.menu-image(src=`img/svg/${i}`, alt="")
+							= t
+				+li('008-beam.svg','Металлопрокат')
+				+li('007-stairs.svg','Чердачные лестницы')
+				+li('003-roof.svg','Кровельные материалы')
+				+li('001-parquet.svg','Ламинат')
+				+li('010-fence.svg','Заборы и ограждения')
+
+				+li('010-window.svg','Мансардные окна')
+				+li('005-floor.svg','Террасные покрытия')
+				+li('007-handsaw.svg','Пиломатериалы')
+				+li('009-tabs.svg','Поликарбонат')
+				+li('008-tap.svg','Водосточные системы')
+				+li('004-insulating-tape.svg','Теплоизоляция')
+				+li('006-brick-wall.svg','Фасадные материалы')
+				+li('002-home.svg','Хозблоки и сараи')
+	// end sCatalog

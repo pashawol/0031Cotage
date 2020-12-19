@@ -1,0 +1,43 @@
+mixin footer()
+	+b.FOOTER.footer.block-with-lazy
+		.container
+			.row
+				.col-md
+					+b.logo-block
+						a(href="#")
+							img(src="img/@2x/logo-color.png", alt="")
+						+e.caption.d-none.d-md-block Интернет-магазин строителных и&nbsp;отделочных материалов
+					addr.pb-3.d-block Складской комплекс &laquo;Ресурс&raquo;, Режевской тракт 15-й км, стр.&nbsp;6, 3&nbsp;этаж, офис 410
+				+e.nav.col-auto
+					ul
+						li: a(href="#") О компании 
+						li: a(href="#") Товары 
+						li: a(href="#") Акция 
+						li: a(href="#") Отзывы 
+						li: a(href="#") Контакты
+				.col-auto  Способы оплаты:
+						br
+						|- Наличные
+						br
+						|- Перевод на карту
+						br
+						|- Перевод по счету
+				.col-auto
+					p Доставка:
+						br
+						| - Бесплатная при заказе от 100 тыс.руб.
+				.col-xl-auto
+					form.input-group
+						input.form-control(type='tel' placeholder="Введите Ваш телефон" aria-label="Введите Ваш телефон" aria-describedby='button-addon2')
+						button#button-addon2.btn.btn-primary(type='button') Обратный звонок
+					div
+						a.text-white(href="tel:+73433821787") +7 343  382 17 87 
+						| / 
+						a.text-white(href="tel:+79222142555") +7 9 222 142 555
+						br
+						a.text-white(href="mailto:zakaz@cottage-online.ru") zakaz@cottage-online.ru
+			+e.copy
+				a.text-white.tdu(href="#") Политика конфиденциальности 
+				.row.row--sm.pt-2
+					.col-sm-auto © 2020
+					+e.small.col Информация на сайте предназначена только для совершеннолетних (18+). Данный интернет-сайт носит исключительно информационный характе и ни при каких условиях не является публичной офертой, определяемой статьями 437 ГК РФ.

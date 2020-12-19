@@ -1,0 +1,58 @@
+mixin sContent()
+	// start sContent
+	+b.SECTION.sContent.section#sContent&attributes(attributes)
+		.container
+			if block
+			else
+				+e.row.row
+					.col-lg-6.order-lg-last.pb-3
+						+pic('img-1.jpg')
+					.col-lg-6.pb-3
+						h2 Помогаем сэкономить на&nbsp;стройке &laquo;под ключ&raquo;
+						p Мы&nbsp;ценим время клиентов, предлагая комплекс решений от&nbsp;замера и подбора&nbsp;&mdash; до&nbsp;доставки и&nbsp;монтажа с&nbsp;гарантией! Вам не&nbsp;придется ездить по&nbsp;магазинам, договариваться со&nbsp;сторонними подрядчиками, тратить силы и&nbsp;нервы на&nbsp;организацию доставки. Наша компания все сделает за&nbsp;вас! Позвольте нашему консультанту рассказать, как еще  Cottage-Online помогает своим клиентам заметно сэкономить на стройматериалах, доставке и&nbsp;работе.
+						.row.row--sm
+							.col.strong.mb-2 Получите бесплатную консультацию и&nbsp;предварительный расчет прямо сейчас! 
+							.col-md-auto
+								a.btn.btn-danger.btn-block(href="#") Получить консультацию!
+	// end sContent
+mixin sContent2()
+	// start sContent
+	+b.SECTION.sContent.section#sContent&attributes(attributes)
+		.container
+			if block
+			else
+				+e.row.row
+					.col-lg-6.order-lg-last.pb-3
+						+pic('img-2.jpg')
+					.col-lg-6.pb-3
+						h2 Хотите купить стройматериалы еще дешевле!
+						p *При заказе строительных материалов на сумму от 100.000 руб <br> - #[strong бесплатная доставка в подарок!]
+
+						p Но, и это еще не все! #[strong Каждый четверг] на все товары устанавливается  дополнительная #[strong(style="color:#e75757")  3% СКИДКА]. Не упустите выгоду, переходите в  наш каталог или обратитесь за бесплатной консультацией к  консультанту.
+							br
+							| Предварительный онлайн расчет вы получите бесплатно!
+						.row.row--sm 
+							.col-lg-6.col-md-auto.mb-3
+								a.btn.btn-outline-danger.btn-block(href="#") Получить консультацию!
+							.col-lg-6.col-md-auto.mb-3
+								a.btn.btn-danger.btn-block(href="#") Перейти в каталог
+	// end sContent
+mixin sContent3()
+	// start sContent
+	+b.SECTION.sContent.section#sContent&attributes(attributes)
+		.container
+			if block
+			else
+				+e.row.row
+					.col-lg-6.order-lg-last.pb-3
+						+pic('img-3.jpg')
+					.col-lg-6.pb-3
+						h2 С нами удобно
+						p К услугам клиента широкий спектр строительных и сопутствующих материалов, собственная служба доставки. Специалисты по подготовительным работам, разработке проекта и монтажу.
+
+						p: strong Расчет производится любым удобным для вас способом: 
+						ul
+							li  #[strong наличными]  в офисе;
+							li  #[strong переводом]  на карту Сбербанк / Тинькофф;
+							li  #[strong безналичной ] оплатой по счету для юридических лиц
+	// end sContent

@@ -1,0 +1,18 @@
+mixin sBanners(data)
+	// start sBanners
+	+b.SECTION.sBanners.section#sBanners&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Новогодние товары к вашему празднику!
+			.row
+				mixin item(i, t)
+					+e.col.col-lg-6
+						+e.item.bg-wrap
+							+pic(i,'bg',0).picture-bg
+							+e.title= t
+							a.btn.btn-outline-success(href="#")
+								+icon("right-arrow")
+								| Смотреть
+				+item('ny-1.jpg','Искусственные ели и гирлянды')
+				+item('ny-2.jpg','Зимние световые фигуры')
+	// end sBanners

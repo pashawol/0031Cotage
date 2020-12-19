@@ -1,0 +1,15 @@
+mixin sConsultation(data)
+	// start sConsultation
+	+b.SECTION.sConsultation.section#sConsultation&attributes(attributes)
+		.container 
+			.row
+				.col-sm-auto.pb-3
+					+pic("img.png")
+				.col
+					p Узнайте больше о&nbsp;том, как Cottage-Online старается сделать сотрудничество с&nbsp;нами максимально комфортным.
+						br
+						| Получите бесплатную консультацию и&nbsp;расчет онлайн прямо сейчас.
+						br
+						| Заполните простую форму, мы&nbsp;свяжемся с&nbsp;вами в&nbsp;течение #[strong(style="color:#e75757") 15&nbsp;минут.]
+					a.btn.btn-outline-danger(href="#") Получить консультацию!
+	// end sConsultation

@@ -1,0 +1,49 @@
+
+	// start .sIcons
+	.sIcons {
+		--sPB: #{rem(20)};
+		&__img-wrap{
+			 width: 63px;
+			 height: 63px;
+			 background-color: #ebf0f7;
+			 border-radius: 50%;
+			 display: flex;
+			 align-items: center;
+			 margin-left: auto;
+			 margin-right: auto;
+			 margin-bottom: 1rem;
+		}
+		 ul{
+			 list-style: none;
+			 display: flex;
+			 justify-content: space-around;
+			//  justify-content: space-between;
+			 flex-wrap: wrap;
+			
+			 text-align: center;
+			 img{
+				 max-width: rem(60);
+				 max-height: rem(45);
+				 flex: 0 0 auto;
+				 margin-left: rem(-4);
+			 }
+			}
+			li{
+			 @include media-breakpoint-up(lg) {
+				 width: auto;
+			 }
+			 text-align: center;
+			 width: 50%;
+			 margin-bottom: rem(30);
+		 }
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	//
+	@include media-breakpoint-between(md, xl) { }
+	//
+	@include media-breakpoint-only(xl) {}
+	//
+	@include media-breakpoint-down(xl) {}
+} // end.sIcons

@@ -1,0 +1,23 @@
+mixin topLine()
+	// start topLine
+	+b.topLine&attributes(attributes)
+		.container
+			.row
+				.col
+					+b.logo-block
+						a(href="#")
+							img(src="img/@2x/logo-color.png", alt="")
+						+e.caption.d-none.d-md-block Интернет-магазин строителных и&nbsp;отделочных материалов
+				.col-auto
+					+e.link(href="tel:+73433821787") +7 343 #[span.text-success 382 17 87]
+					br
+					+e.link(href="tel:+79222142555") +7 9 222 142 555
+				.col-auto.d-none.d-lg-block
+					form.input-group
+						input.form-control(type='tel' placeholder="Введите Ваш телефон" aria-label="Введите Ваш телефон" aria-describedby='button-addon2')
+						button#button-addon2.btn.btn-primary(type='button') Обратный звонок
+				.col-auto.d-lg-none
+					.c
+						+b.toggle-menu-mobile--js
+							span
+	// end topLine

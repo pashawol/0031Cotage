@@ -1,0 +1,15 @@
+mixin sRews(data)
+	// start sRews
+	+b.SECTION.sRews.section#sRews&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 9&nbsp;из&nbsp;10&nbsp;клиентов рекомендуют нас друзьям и&nbsp;знакомым
+			+e.slider--js.swiper-container
+				+arrow
+				.swiper-wrapper
+					- for (var x = 0; x < 3; x++)
+						+e.slide.swiper-slide
+							+e.img-wrap
+								img.swiper-lazy(src="#" data-src="img/@2x/img-1.jpg", alt="")
+							p «Мы ценим время клиентов, предлагая комплекс  решений от замера и подбора – до доставки и монтажа с гарантией! Вам не придется ездить по магазинам, договариваться со сторонними подрядчиками, тратить силы и нервы на организацию доставки. Наша компания все сделает за вас! Позвольте нашему консультанту рассказать, как еще Cottage-Online помогает своим клиентам заметно  сэкономить на стройматериалах, доставке и работе.»
+	// end sRews

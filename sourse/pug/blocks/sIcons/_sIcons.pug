@@ -1,0 +1,15 @@
+mixin sIcons(data)
+	// start sIcons
+	+b.SECTION.sIcons.section#sIcons&attributes(attributes)
+		.container
+			ul
+				mixin item(i,t)
+					li
+						+e.img-wrap
+							img(src=`img/svg/${i}`, alt="")
+						= t	
+				+item('002-shipped.svg','Бесплатная доставка*')
+				+item('001-tape-measure.svg','Бесплатный замер')
+				+item('004-guarantee.svg','5 лет гарантии на всё')
+				+item('003-piggy-bank.svg','С нами выгодно!')
+	// end sIcons
