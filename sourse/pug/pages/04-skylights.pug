@@ -1,0 +1,61 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sIcons/_sIcons.pug
+include ../blocks/sBanners/_sBanners.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sRews/_sRews.pug
+include ../blocks/sConsultation/_sConsultation.pug
+include ../blocks/m-headerBlock/_m-headerBlock.pug
+include ../blocks/m-catalog/_m-catalog.pug
+include ../blocks/m-whyAreWe/_m-whyAreWe.pug
+include ../blocks/sIcons2/_sIcons2.pug
+
+block variables
+	- let  mainPage= null
+block title
+	-
+		let title= `Мансардныe окна`
+		
+		let catalogTitle= `Мансардные окна ведущих производителей`
+
+		let subtitle= `Оптовая и&nbsp;розничная продажа мансардных окон.`
+
+		let text= `Мансардное окно служит источником естественного освещения и&nbsp;вентиляции помещения. Главное отличие изделия заключается в&nbsp;способе открытия и&nbsp;общей конструкции. Окна на&nbsp;мансарду разделяются на&nbsp;комбинированный вариант с&nbsp;панорамным открытием, люк, среднеповоротные и&nbsp;с&nbsp;приподнятой осью поворота. <br>Компания Cottage-Online предоставляет услуги подбора, поставки и&nbsp;монтажа мансардных окон &laquo;под ключ&raquo;. Предлагаем качественную продукцию из&nbsp;натуральной древесины и&nbsp;экологически чистых материалов. А&nbsp;также пластиковые окна по&nbsp;выгодным ценам. Изделия отвечают международным и&nbsp;отечественным стандартам. В&nbsp;том числе, допускаются к&nbsp;установке в&nbsp;детских комнатах и&nbsp;спальнях.`
+
+		let img= `010-window.svg`
+
+		var items= {
+			'Fakro.png':'Fakro',
+			'Velux.png':'Velux'
+			}
+
+	title= title
+block pagecontent
+
+	//- +mob-mnu()
+	+topLine() 
+	+top-nav()
+	+m-headerBlock({
+		title,
+		subtitle,
+		text,
+		img
+	})
+	+m-catalog(items, catalogTitle)
+	//- +m-whyAreWe(`Почему покупатели выбирают нас?`,`warehouse.png`,` Поставка материалов строго по&nbsp;ГОСТ;`,` Подбор и&nbsp;консультация клиентов бесплатно;`,` Доступные цены при любом объеме закупок;`,` Сопутствующая документация;`,` Гарантия на&nbsp;материалы;`,` Удобные способы оплаты;`,` Поставка быстро и&nbsp;в&nbsp;срок;`,` Контроль качества хранения продукции.`).bg-color
+	//- +headerBlock()
+	+sIcons2
+	//- +sContent().bg-color
+	//- +sCatalog
+	//- +sBanners
+	//- +sContent2().bg-color
+	//- +sRews
+	//- +sContent3().bg-color
+	//- +sConsultation
+	+footer()
+
+
+	

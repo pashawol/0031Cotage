@@ -1,0 +1,65 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sIcons/_sIcons.pug
+include ../blocks/sBanners/_sBanners.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sRews/_sRews.pug
+include ../blocks/sConsultation/_sConsultation.pug
+include ../blocks/m-headerBlock/_m-headerBlock.pug
+include ../blocks/m-catalog/_m-catalog.pug
+include ../blocks/m-whyAreWe/_m-whyAreWe.pug
+include ../blocks/sIcons2/_sIcons2.pug
+
+block variables
+	- let  mainPage= null
+block title
+	-
+		let title= 'Заборы и ограждения'
+		
+		let catalogTitle= `Материалы для строительства забора &laquo;Под ключ&raquo;`
+
+		let subtitle= `Оптовая и&nbsp;розничная продажа заборов и&nbsp;ограждений &laquo;под ключ&raquo;`
+
+		let text= `Продукция из&nbsp;стали и&nbsp;цветного металла по&nbsp;доступным ценам. Металлопрокат незаменим при строительстве объектов недвижимости. Активно используется в&nbsp;машиностроении, пищевой и&nbsp;химической промышленности. Поставляемые изделия отличаются ценовой доступностью при сохранении качества. Широкий ассортимент, собственные мощности для обеспечения доставки и&nbsp;монтажа, позволяют закрыть &laquo;под ключ&raquo; потребности клиента.<br> Компания Cottage-Online предоставляет гарантию на&nbsp;материалы и&nbsp;работы. С&nbsp;поставкой передается необходимый пакет документов. Оплата производится по&nbsp;выставленному счету, наличными или переводом на&nbsp;карту Сбербанк&nbsp;/ Тинькофф.`
+
+		let img= `010-fence.svg`
+
+		var items= {
+			'profiled-fence.png':'Профнастил',
+			'Metal-picket-fence.png':'Металлический штакетник',
+			'fence-blinds.png':'Забор-Жалюзи',
+			'welded-fence.png':'Панельные ограждения (сварные)',
+			'caps.png':'Колпаки на столбы для забора',
+			'fence-board.png':'Заборная доска из ДПК'
+			}
+
+	title= title
+block pagecontent
+
+	//- +mob-mnu()
+	+topLine() 
+	+top-nav()
+	+m-headerBlock({
+		title,
+		subtitle,
+		text,
+		img
+	})
+	+m-catalog(items, catalogTitle)
+	+sIcons2
+	+m-whyAreWe(`Не знаете какой забор вам нужен?`,`consultant.png`,`Выбор материалов для строительства ограждений на&nbsp;участке зависит от&nbsp;целей, эстетической составляющей и&nbsp;бюджета клиента. `,`Каждый вид обладает своими преимуществами.`,`<br>`,`<b>Хотите, чтобы наш консультант вам помог?</b>`,`Заполните простую форму и&nbsp;получите консультацию специалиста по&nbsp;видам заборов. Менеджер перезвонит в&nbsp;течение 15&nbsp;минут, внимательно выслушает вас и&nbsp;предложит подходящие варианты.`).bg-color
+	//- +headerBlock()
+	//- +sContent().bg-color
+	//- +sCatalog
+	//- +sBanners
+	//- +sContent2().bg-color
+	//- +sRews
+	//- +sContent3().bg-color
+	//- +sConsultation
+	+footer()
+
+
+	

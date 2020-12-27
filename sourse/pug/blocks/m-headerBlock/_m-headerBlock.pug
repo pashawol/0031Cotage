@@ -1,0 +1,13 @@
+mixin m-headerBlock(data)
+	// start m-headerBlock
+	+b.m-headerBlock#m-headerBlock&attributes(attributes)
+		.container
+			+e.block
+				h1!= data.title
+				+e.text!= data.subtitle
+				p!= data.text
+				if data.img
+					.icon-wrap
+						img.menu-image(src=`img/svg/${data.img}`, alt="")
+				//- +pic("metal-1.png",'',0)
+	// end m-headerBlock

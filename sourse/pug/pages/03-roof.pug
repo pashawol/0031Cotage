@@ -1,0 +1,67 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sIcons/_sIcons.pug
+include ../blocks/sBanners/_sBanners.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sRews/_sRews.pug
+include ../blocks/sConsultation/_sConsultation.pug
+include ../blocks/m-headerBlock/_m-headerBlock.pug
+include ../blocks/m-catalog/_m-catalog.pug
+include ../blocks/m-whyAreWe/_m-whyAreWe.pug
+include ../blocks/sIcons2/_sIcons2.pug
+
+block variables
+	- let  mainPage= null
+block title
+	-
+		let title= `Кровельные материалы`
+		
+		let catalogTitle= `Кровельные материалы оптом и&nbsp;в&nbsp;розницу по&nbsp;доступным ценам`
+
+		let subtitle= `Оптовая и&nbsp;розничная продажа кровельных материалов.`
+
+		let text= `Защитное покрытие крыши, стойкое к&nbsp;воздействию природных осадков. Кровля является незаменимым материалом в&nbsp;строительстве. Имеет различия по&nbsp;визуальным и&nbsp;эксплуатационным характеристикам в&nbsp;зависимости от&nbsp;используемых в&nbsp;производстве соединений. <br>Наиболее популярными и&nbsp;распространенными считаются листовые, штучные материалы и&nbsp;гибкая кровля. Компания Cottage-Online закрывает &laquo;под ключ&raquo; вопрос подбора, доставки и&nbsp;монтажа защитного покрытия крыш. <br>Оформите заявку на&nbsp;консультацию на&nbsp;сайте. Специалист перезвонит вам в&nbsp;течение 15&nbsp;минут. Поможет с&nbsp;выбором материалов, ответит на&nbsp;вопросы и&nbsp;уточнит подробности. Вы&nbsp;получите предварительный расчет стоимости кровли и&nbsp;работ совершенно бесплатно.`
+
+		let img= `003-roof.svg`
+
+		var items= {
+			'metal-tile.png':'Металлочерепица',
+			'Profiled-sheeting.png':'Профнастил для кровли',
+			'Flexible-tiles.png':'Гибкая черепица',
+			'composite-tiles.png':'Композитная черепица',
+			'onduline.png':'Ондулин',
+			'safety.png':'Элементы безопасности кровли',
+			'elements.png':'Доборные элементы для кровли',
+			'ventilation.png':'Кровельная вентиляция'
+			}
+
+	title= title
+block pagecontent
+
+	//- +mob-mnu()
+	+topLine() 
+	+top-nav()
+	+m-headerBlock({
+		title,
+		subtitle,
+		text,
+		img
+	})
+	+m-catalog(items, catalogTitle)
+	//- +m-whyAreWe(`Почему покупатели выбирают нас?`,`warehouse.png`,` Поставка материалов строго по&nbsp;ГОСТ;`,` Подбор и&nbsp;консультация клиентов бесплатно;`,` Доступные цены при любом объеме закупок;`,` Сопутствующая документация;`,` Гарантия на&nbsp;материалы;`,` Удобные способы оплаты;`,` Поставка быстро и&nbsp;в&nbsp;срок;`,` Контроль качества хранения продукции.`).bg-color
+	//- +headerBlock()
+	+sIcons2
+	//- +sContent().bg-color
+	//- +sCatalog
+	//- +sBanners
+	//- +sContent2().bg-color
+	//- +sRews
+	//- +sContent3().bg-color
+	//- +sConsultation
+	+footer()
+
+
+	

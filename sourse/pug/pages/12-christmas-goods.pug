@@ -1,0 +1,86 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sIcons/_sIcons.pug
+include ../blocks/sBanners/_sBanners.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sRews/_sRews.pug
+include ../blocks/sConsultation/_sConsultation.pug
+include ../blocks/m-headerBlock/_m-headerBlock.pug
+include ../blocks/m-catalog/_m-catalog.pug
+include ../blocks/m-whyAreWe/_m-whyAreWe.pug
+include ../blocks/sIcons2/_sIcons2.pug
+
+block variables
+	- let  mainPage= null
+block title
+	-
+		let title= 'Новогодние товары'
+		
+		//- let catalogTitle= `Металлопрокат оптом и&nbsp;в&nbsp;розницу в&nbsp;наличии`
+
+		let subtitle= `Новогодние товары оптом и&nbsp;в&nbsp;розницу.`
+
+		let text= `Редкий праздник обходится без ярких цветных украшений. Компания Cottage-Online обеспечит поставку искусственных елей, гирлянд и&nbsp;световых фигур по&nbsp;доступным ценам! Оптом и&nbsp;в&nbsp;розницу, товары надежного качества от&nbsp;проверенных поставщиков. А&nbsp;наша служба доставки поможет вам заметно сэкономить на&nbsp;транспортных расходах! <br>Узнайте подробности у&nbsp;консультанта. Заполните заявку на&nbsp;обратный звонок. Специалист с&nbsp;удовольствием ответит на&nbsp;все ваши вопросы. Перезвоним в&nbsp;течение 15&nbsp;минут!`
+
+		let img= `сhristmas-tree.svg`
+
+		//- var items= {
+		//- 	'rebar.png':'Арматура',
+		//- 	'angle.png':'Уголок',
+		//- 	'channel.png':'Швеллер',
+		//- 	'strip.png':'Полоса',
+		//- 	'shaped-tube.png':'Труба профильная',
+		//- 	'flat-stock.png':'Листовой прокат',
+		//- 	'circle.png':'Круг',
+		//- 	'square.png':'Квадрат',
+		//- 	'rails.png':'Рельсы',
+		//- 	'stainless.png':'Нержавеющий прокат'
+		//- 	}
+		let items2= [
+			[
+				`сhristmas-tree.png`,
+				`Искусственные ели и гирлянды`,
+				`btnRed`,
+				`Поставка товаров для декорирования экстерьера и&nbsp;интерьера вашего дома. Широкий ассортимент. Смелые решения. Гарантия качества!`,	
+			],
+
+			[
+				`light-figures.png`,
+				`Зимние световые фигуры`,
+				`btnRed`,
+				`Большой выбор фигур для частных и&nbsp;корпоративных клиентов, а&nbsp;также муниципальных учреждений. Широкий ассортимент моделей, маленькие и&nbsp;ростовые фигуры. Гарантия качества, доставка, монтаж!`
+			]
+
+		]
+
+	title= title
+block pagecontent
+
+	//- +mob-mnu()
+	+topLine() 
+	+top-nav()
+	+m-headerBlock({
+		title,
+		subtitle,
+		text,
+		img
+	})
+	//- +m-catalog(items, catalogTitle)
+	+m-catalog2('Новогодние товары по&nbsp;низким ценам', items2)
+	+m-whyAreWe(`Почему покупатели выбирают нас?`,`warehouse.png`,`- Поставка материалов строго по&nbsp;ГОСТ;`,`- Подбор и&nbsp;консультация клиентов бесплатно;`,`- Доступные цены при любом объеме закупок;`,`- Сопутствующая документация;`,`- Гарантия на&nbsp;материалы;`,`- Удобные способы оплаты;`,`- Поставка быстро и&nbsp;в&nbsp;срок;`,`- Контроль качества хранения продукции.`).bg-color
+	//- +headerBlock()
+	+sIcons2
+	//- +sContent().bg-color
+	//- +sCatalog
+	//- +sBanners
+	//- +sContent2().bg-color
+	//- +sRews
+	//- +sContent3().bg-color
+	//- +sConsultation
+	+footer()
+
+
+	

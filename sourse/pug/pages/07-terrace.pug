@@ -1,0 +1,64 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sIcons/_sIcons.pug
+include ../blocks/sBanners/_sBanners.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sRews/_sRews.pug
+include ../blocks/sConsultation/_sConsultation.pug
+include ../blocks/m-headerBlock/_m-headerBlock.pug
+include ../blocks/m-catalog/_m-catalog.pug
+include ../blocks/m-whyAreWe/_m-whyAreWe.pug
+include ../blocks/sIcons2/_sIcons2.pug
+
+block variables
+	- let  mainPage= null
+block title
+	-
+		let title= 'Террасные покрытия'
+		
+		let catalogTitle= `Террасные покрытия по&nbsp;низким ценам`
+
+		let subtitle= `Оптовая и&nbsp;розничная продажа террасных покрытий.`
+
+		let text= `Прочное и&nbsp;надежное изделие для жёстких настилов. Террасные покрытия активно применяются в&nbsp;устройстве террас, веранд, балконов и&nbsp;прибассейной зоны. Также доски из&nbsp;ДПК и&nbsp;лиственницы идеально подходят для садовых дорожек и&nbsp;лестниц. Материалы не&nbsp;впитывают влагу, успешно переносят температурные перепады и&nbsp;природные осадки. <br>Закажите террасное покрытие по&nbsp;доступной цене в&nbsp;компании Cottage-Online! Оптом и&nbsp;в&nbsp;розницу со&nbsp;складов производителей. Благодаря собственной службе доставки и&nbsp;монтажа, воспользовавшись комплексом услуг, вы&nbsp;сэкономите на&nbsp;устройстве покрытия время и&nbsp;деньги.`
+
+		let img= `005-floor.svg`
+
+		var items= {
+			'save-wood.png':'Террасная доска из ДПК SaveWood ',
+			'cm-decking.png':'Террасная доска из ДПК Cottage mode (CM Decking)',
+			'harvex.png':'Террасная доска из ДПК Harvex',
+			'larch.png':'Террасная доска из лиственницы',
+			'supports.png':'Регулируемые опоры'
+			}
+
+	title= title
+block pagecontent
+
+	//- +mob-mnu()
+	+topLine() 
+	+top-nav()
+	+m-headerBlock({
+		title,
+		subtitle,
+		text,
+		img
+	})
+	+m-catalog(items, catalogTitle)
+	+m-whyAreWe(`Почему покупатели выбирают нас?`,`warehouse.png`,`- Поставка материалов строго по&nbsp;ГОСТ;`,`- Подбор и&nbsp;консультация клиентов бесплатно;`,`- Доступные цены при любом объеме закупок;`,`- Сопутствующая документация;`,`- Гарантия на&nbsp;материалы;`,`- Удобные способы оплаты;`,`- Поставка быстро и&nbsp;в&nbsp;срок;`,`- Контроль качества хранения продукции.`).bg-color
+	//- +headerBlock()
+	+sIcons2
+	//- +sContent().bg-color
+	//- +sCatalog
+	//- +sBanners
+	//- +sContent2().bg-color
+	//- +sRews
+	//- +sContent3().bg-color
+	//- +sConsultation
+	+footer()
+
+
+	

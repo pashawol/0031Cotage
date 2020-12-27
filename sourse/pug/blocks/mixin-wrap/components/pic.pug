@@ -10,7 +10,6 @@ mixin pic(i, bg,  media='576px')
 		-
 			const url= `img/@${path}/${expArr[0]}.${exp}` 
 			const data = (ifLazy ?  url  : null)
-
 		if source
 			source(type=`image/${exp}` srcset=url)&attributes(attributes)
 		else

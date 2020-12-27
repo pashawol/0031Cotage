@@ -1,0 +1,69 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sIcons/_sIcons.pug
+include ../blocks/sBanners/_sBanners.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sRews/_sRews.pug
+include ../blocks/sConsultation/_sConsultation.pug
+include ../blocks/m-headerBlock/_m-headerBlock.pug
+include ../blocks/m-catalog/_m-catalog.pug
+include ../blocks/m-whyAreWe/_m-whyAreWe.pug
+include ../blocks/sIcons2/_sIcons2.pug
+
+block variables
+	- let  mainPage= null
+block title
+	-
+		let title= 'Металлопрокат'
+		
+		let catalogTitle= `Металлопрокат оптом и&nbsp;в&nbsp;розницу в&nbsp;наличии`
+
+		let subtitle= `Оптовая и&nbsp;розничная продажа металлопроката.`
+
+		let text= `Продукция из&nbsp;стали и&nbsp;цветного металла по&nbsp;доступным ценам. Металлопрокат незаменим при строительстве объектов недвижимости. Активно используется в&nbsp;машиностроении, пищевой и&nbsp;химической промышленности. Поставляемые изделия отличаются ценовой доступностью при сохранении качества. Широкий ассортимент, собственные мощности для обеспечения доставки и&nbsp;монтажа, позволяют закрыть &laquo;под ключ&raquo; потребности клиента.<br> Компания Cottage-Online предоставляет гарантию на&nbsp;материалы и&nbsp;работы. С&nbsp;поставкой передается необходимый пакет документов. Оплата производится по&nbsp;выставленному счету, наличными или переводом на&nbsp;карту Сбербанк&nbsp;/ Тинькофф.`
+
+		let img= `008-beam.svg`
+
+		var items= {
+			'rebar.png':'Арматура',
+			'angle.png':'Уголок',
+			'channel.png':'Швеллер',
+			'strip.png':'Полоса',
+			'shaped-tube.png':'Труба профильная',
+			'flat-stock.png':'Листовой прокат',
+			'circle.png':'Круг',
+			'square.png':'Квадрат',
+			'rails.png':'Рельсы',
+			'stainless.png':'Нержавеющий прокат'
+			} 
+
+	title= title
+block pagecontent
+
+	//- +mob-mnu()
+	+topLine() 
+	+top-nav()
+	+m-headerBlock({
+		title,
+		subtitle,
+		text,
+		img
+	})
+	+m-catalog(items, catalogTitle)
+	+m-whyAreWe(`Почему покупатели выбирают нас?`,`warehouse.png`,`- Поставка материалов строго по&nbsp;ГОСТ;`,`- Подбор и&nbsp;консультация клиентов бесплатно;`,`- Доступные цены при любом объеме закупок;`,`- Сопутствующая документация;`,`- Гарантия на&nbsp;материалы;`,`- Удобные способы оплаты;`,`- Поставка быстро и&nbsp;в&nbsp;срок;`,`- Контроль качества хранения продукции.`).bg-color
+	//- +headerBlock()
+	+sIcons2
+	//- +sContent().bg-color
+	//- +sCatalog
+	//- +sBanners
+	//- +sContent2().bg-color
+	//- +sRews
+	//- +sContent3().bg-color
+	//- +sConsultation
+	+footer()
+
+
+	

@@ -1,0 +1,63 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sIcons/_sIcons.pug
+include ../blocks/sBanners/_sBanners.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sRews/_sRews.pug
+include ../blocks/sConsultation/_sConsultation.pug
+include ../blocks/m-headerBlock/_m-headerBlock.pug
+include ../blocks/m-catalog/_m-catalog.pug
+include ../blocks/m-whyAreWe/_m-whyAreWe.pug
+include ../blocks/sIcons2/_sIcons2.pug
+
+block variables
+	- let  mainPage= null
+block title
+	-
+		let title= 'Пиломатериалы'
+		
+		let catalogTitle= `Пиломатериал оптом и&nbsp;в&nbsp;розницу в&nbsp;наличии`
+
+		let subtitle= `Оптовая и&nbsp;розничная продажа пиломатериалов.`
+
+		let text= `Древесина сухая и&nbsp;естественной влажности. Широкий ассортимент пиломатериалов, готовых к&nbsp;транспортировке и&nbsp;монтажу на&nbsp;вашем участке. Закажите свежее изделие, компания Cottage-Online предлагает дерево отборных сортов прямой поставки с&nbsp;пилорамы. Обрезная и&nbsp;половая доска, профильный брус. Строганные доски, евровагонка, фанера и&nbsp;утеплители. Гарантия на&nbsp;материалы и&nbsp;работы. Сопутствующая документация. Сэкономьте на&nbsp;текущих затратах. Оформите комплексное обслуживание Cottage-Online! <br>Наши специалисты помогут с&nbsp;выбором подходящего материала. Оформят доставку до&nbsp;места проведения строительных работ. Возведут конструкции силами опытных мастеров в&nbsp;штате компании.`
+
+		let img= `007-handsaw.svg`
+
+		var items= {
+			'Sleeper.png':`Шпала деревянная`,
+			'hardwood.png':`Пиломатериалы лиственных пород`,
+			'bars.png':`Брус переводной`,
+			'softwood.png':`Пиломатериалы хвойных пород`
+			}
+
+	title= title
+block pagecontent
+
+	//- +mob-mnu()
+	+topLine() 
+	+top-nav()
+	+m-headerBlock({
+		title,
+		subtitle,
+		text,
+		img
+	})
+	+m-catalog(items, catalogTitle)
+	+m-whyAreWe(`Заказать пиломатериал просто`,`worker.png`,`Мы&nbsp;ценим внимание и&nbsp;время клиентов. Сотрудничество с&nbsp;Cottage-Online гарантирует скорость, качество и&nbsp;ценовую доступность. Заказать продукцию из&nbsp;древесины просто:`,`<b>1.</b> Оформите заявку`,`<b>2.</b> Наш менеджер свяжется с&nbsp;вами в&nbsp;течение 15&nbsp;минут`,`<b>3.</b> Получите бесплатную консультацию и&nbsp;предварительный расчет`,`<b>4.</b> Заключите официальный договор`,`<b>5.</b> Оформите предоплату наличными в&nbsp;офисе, по&nbsp;карте <br>Сбербанк/Тинькофф, по&nbsp;счету (для&nbsp;юр. лиц)`,`<b>7.</b> Поможем с&nbsp;монтажом`,`<b>8</b>. Передадим результаты с&nbsp;гарантией и&nbsp;в&nbsp;кратчайшие сроки!`).bg-color
+	//- +headerBlock()
+	+sIcons2
+	//- +sContent().bg-color
+	//- +sCatalog
+	//- +sBanners
+	//- +sContent2().bg-color
+	//- +sRews
+	//- +sContent3().bg-color
+	//- +sConsultation
+	+footer()
+
+
+	

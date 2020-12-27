@@ -1,0 +1,52 @@
+
+	// start .m-whyAreWe
+	.m-whyAreWe {
+		--sPT: #{rem(50)};
+		--sPB: #{rem(34)};
+
+		@include media-breakpoint-down(lg) {
+			padding-top: rem(30);
+			padding-bottom: 0;
+		}
+
+		h2 {
+			@include media-breakpoint-up(lg) {
+			padding-bottom: rem(12);
+			}
+		}
+		ul {
+			@include media-breakpoint-up(lg) {
+				padding-bottom: rem(22);
+			}
+		}
+		&__row{
+			@include media-breakpoint-up(xl) {
+
+				//--bs-gutter-x: #{rem(48)};
+			  }
+		}
+		.btn {
+			min-width: rem(237);
+		}
+	  .row .row{
+
+	  }
+	  li {
+		  list-style: none;
+
+		//   &::before {
+		// 	  content: '-';
+		//   }
+	  }
+		 
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	//
+	@include media-breakpoint-between(md, xl) { }
+	//
+	@include media-breakpoint-only(xl) {}
+	//
+	@include media-breakpoint-down(xl) {}
+} // end.m-whyAreWe

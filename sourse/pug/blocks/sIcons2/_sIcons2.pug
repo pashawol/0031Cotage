@@ -1,0 +1,19 @@
+mixin sIcons2(data)
+	// start sIcons2
+	+b.SECTION.sIcons2.section#sIcons2&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Как мы&nbsp;работаем?
+			ul
+				mixin item(i,t)
+					li
+						+e.img-wrap
+							img(src=`img/@2x/${i}`, alt="")
+						+e.text!= t	
+				+item('tape-measure2.png','Консультация, замер, <br> заключение договора')
+				+item('shipped2.png','Предоплата, доставка <br> материалов, монтаж')
+				+item('guarantee2.png','Передача результатов работ <br> клиенту и&nbsp;оплата')
+			.text-center
+				+e.btn(href="#") Сделать первый шаг прямо сейчас!
+
+	// end sIcons2

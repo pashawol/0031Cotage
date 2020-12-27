@@ -1,0 +1,93 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sIcons/_sIcons.pug
+include ../blocks/sBanners/_sBanners.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sRews/_sRews.pug
+include ../blocks/sConsultation/_sConsultation.pug
+include ../blocks/m-headerBlock/_m-headerBlock.pug
+include ../blocks/m-catalog/_m-catalog.pug
+include ../blocks/m-whyAreWe/_m-whyAreWe.pug
+include ../blocks/sIcons2/_sIcons2.pug
+
+block variables
+	- let  mainPage= null
+block title
+	-
+		let title= 'Водосточные системы'
+		
+		//- let catalogTitle= `Металлопрокат оптом и&nbsp;в&nbsp;розницу в&nbsp;наличии`
+
+		let subtitle= `Оптовая и&nbsp;розничная продажа водосточных систем.`
+
+		let text= `Система стока воды обеспечивает отвод атмосферных осадков с&nbsp;кровли. В&nbsp;зависимости от&nbsp;потребностей клиента и&nbsp;технологических особенностей сооружений, применяются пластиковые, металлические или оцинкованные изделия.`
+
+		let img= `008-tap.svg`
+
+		//- var items= {
+		//- 	'rebar.png':'Арматура',
+		//- 	'angle.png':'Уголок',
+		//- 	'channel.png':'Швеллер',
+		//- 	'strip.png':'Полоса',
+		//- 	'shaped-tube.png':'Труба профильная',
+		//- 	'flat-stock.png':'Листовой прокат',
+		//- 	'circle.png':'Круг',
+		//- 	'square.png':'Квадрат',
+		//- 	'rails.png':'Рельсы',
+		//- 	'stainless.png':'Нержавеющий прокат'
+		//- 	} 
+		let items2= [
+			[
+				`plastic-drainage.png`,
+				`Пластиковые водосточные системы Альта-профиль и Docke-R`,
+				`btnRed`,
+				`Системы поверхностного водоотвода талых и&nbsp;дождевых вод. Изготовлены из&nbsp;износостойкого пластика с&nbsp;огнеупорными компонентами и&nbsp;аддитивами, повышающими прочность. `,
+				`Срок полезной эксплуатации не&nbsp;менее 25&nbsp;лет. Легкий вес не&nbsp;нагружает несущие конструкции. Простота монтажа и&nbsp;ценовая доступность выгодно выделяют продукт в&nbsp;сравнении с&nbsp;металлическими аналогами.. `
+			],
+			[
+				`metal-drainage.png`,
+				`Металлические водосточные системы`,
+				`btnRed`,
+				`Компания Cottage-Online поставляет продукцию высокого качества от&nbsp;производителей, проверенных временем и&nbsp;практикой. Водосточные системы Snegos, Grand Line и&nbsp;Металл-профиль.`,
+				`Независимо от&nbsp;аналогов-заменителей, металл остается наиболее прочным, устойчивым к&nbsp;сверхвысоким нагрузкам и&nbsp;надежным материалом для устройства водостока.`
+			],
+			[
+				`galvanized-drainage.png`,
+				`Оцинкованная водосточная система`,
+				`btnRed`,
+				`Главным преимуществом оцинкованной водоотводящей системы является стойкость к&nbsp;коррозии. А&nbsp;также значительное уменьшение веса, наряду с&nbsp;аналогами из&nbsp;металла.`,
+				`Оцинкованные изделия устойчивы к&nbsp;природным осадкам, выдерживают сверхвысокие нагрузки. Отдельного внимания заслуживает визуальное преображение дома. Матовые и&nbsp;глянцевые водостоки не&nbsp;только надежны, но&nbsp;и&nbsp;прекрасно смотрятся.`
+			]
+		]
+
+	title= title
+block pagecontent
+
+	//- +mob-mnu()
+	+topLine() 
+	+top-nav()
+	+m-headerBlock({
+		title,
+		subtitle,
+		text,
+		img
+	})
+	//- +m-catalog(items, catalogTitle)
+	+m-catalog2('Водосточные системы по&nbsp;низким ценам', items2)
+	+m-whyAreWe(`Почему покупатели выбирают нас?`,`warehouse.png`,`- Поставка материалов строго по&nbsp;ГОСТ;`,`- Подбор и&nbsp;консультация клиентов бесплатно;`,`- Доступные цены при любом объеме закупок;`,`- Сопутствующая документация;`,`- Гарантия на&nbsp;материалы;`,`- Удобные способы оплаты;`,`- Поставка быстро и&nbsp;в&nbsp;срок;`,`- Контроль качества хранения продукции.`).bg-color
+	//- +headerBlock()
+	+sIcons2
+	//- +sContent().bg-color
+	//- +sCatalog
+	//- +sBanners
+	//- +sContent2().bg-color
+	//- +sRews
+	//- +sContent3().bg-color
+	//- +sConsultation
+	+footer()
+
+
+	

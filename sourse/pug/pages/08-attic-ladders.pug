@@ -1,0 +1,61 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sIcons/_sIcons.pug
+include ../blocks/sBanners/_sBanners.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sRews/_sRews.pug
+include ../blocks/sConsultation/_sConsultation.pug
+include ../blocks/m-headerBlock/_m-headerBlock.pug
+include ../blocks/m-catalog/_m-catalog.pug
+include ../blocks/m-whyAreWe/_m-whyAreWe.pug
+include ../blocks/sIcons2/_sIcons2.pug
+
+block variables
+	- let  mainPage= null
+block title
+	-
+		let title= 'Чердачные лестницы'
+		
+		let catalogTitle= `Чердачные лестницы ведущих производителей в&nbsp;наличии`
+
+		let subtitle= `Оптовая и&nbsp;розничная продажа чердачных лестниц.`
+
+		let text= `Складные чердачные лестницы из&nbsp;дерева и&nbsp;металла. Изделия для редкого доступа в&nbsp;помещение монтируются с&nbsp;люком. Качество предлагаемой нами конструкции обеспечивает надежность и&nbsp;долговечность. Вы&nbsp;можете заказать чердачные лестницы оптом для бизнеса и&nbsp;в&nbsp;розницу для частного использования. Воспользуйтесь удобной доставкой и&nbsp;услугами монтажа, входящими в&nbsp;комплекс услуг компании Cottage-Online. <br>Мы&nbsp;предоставляем гарантию на&nbsp;материалы и&nbsp;работы. С&nbsp;поставкой передается необходимый пакет документов. Оплата производится по&nbsp;выставленному счету, наличными или переводом на&nbsp;карту Сбербанк&nbsp;/ Тинькофф.`
+
+		let img= `007-stairs.svg`
+
+		var items= {
+			'fakro-ladder.png':'Fakro',
+			'velux-ladder.png':'Velux'
+			}
+
+	title= title
+block pagecontent
+
+	//- +mob-mnu()
+	+topLine() 
+	+top-nav()
+	+m-headerBlock({
+		title,
+		subtitle,
+		text,
+		img
+	})
+	+m-catalog(items, catalogTitle)
+	+m-whyAreWe(`Почему клиенты выбирают сотрудничество с&nbsp;Cottage-Online`,`shop.png`,`- Поставка материалов строго по&nbsp;ГОСТ;`,`- Подбор и&nbsp;консультация клиентов бесплатно;`,`- Доступные цены при любом объеме закупок;`,`- Сопутствующая документация;`,`- Гарантия на&nbsp;материалы;`,`- Удобные способы оплаты;`,`- Поставка быстро и&nbsp;в&nbsp;срок;`,`- Контроль качества хранения продукции.`).bg-color
+	//- +headerBlock()
+	+sIcons2
+	//- +sContent().bg-color
+	//- +sCatalog
+	//- +sBanners
+	//- +sContent2().bg-color
+	//- +sRews
+	//- +sContent3().bg-color
+	//- +sConsultation
+	+footer()
+
+
+	

@@ -1,0 +1,46 @@
+mixin m-catalog(items, catalogTitle)
+	// start m-catalog
+	+b.SECTION.m-catalog.section#m-catalog&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2!= catalogTitle
+			.row
+				mixin item(i, t)
+					+e.col.col-lg-6
+						+e.item.bg-wrap
+							+pic(i,'bg',0).picture-bg
+							+e.title= t
+							a.btn.btn-outline-success(href="#")
+								+icon("right-arrow")
+								| Смотреть
+				each titile, image in items
+					+item(image, titile)
+	// end m-catalog
+
+
+mixin m-catalog2(title, items)
+	// start m-catalog
+	+b.SECTION.m-catalog.section#m-catalog&attributes(attributes)
+		.container
+			if title
+				+b.section-title.text-center
+						h2!= title
+			mixin item(i, t, btnRed, ...itemsInner)
+				.row
+					+e.col.col-lg-6
+						+e.item.bg-wrap
+							+pic(i,'bg',0).picture-bg
+							+e.title= t
+							if !btnRed
+								a.btn.btn-outline-success(href="#")
+									+icon("right-arrow")
+									| Смотреть
+					+e.col.col-lg-6
+						each item in itemsInner
+							p!= item
+						if btnRed
+							a.btn.btn-outline-danger.m-top(href="#") 
+								| Оформить заказ
+			each item in items
+				+item(...item)
+	// end m-catalog

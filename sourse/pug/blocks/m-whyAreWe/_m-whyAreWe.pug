@@ -1,0 +1,16 @@
+mixin m-whyAreWe(tittle, img, ...items)
+	// start m-whyAreWe
+	+b.SECTION.m-whyAreWe.section#m-whyAreWe&attributes(attributes)
+		.container
+			+e.row.row
+				.col-lg-6.order-lg-last.pb-3
+					+pic(img)
+				.col-lg-6.pb-3
+					h2!= tittle
+					ul
+						each item in items
+							li!= item
+					.row.row--sm 
+						.col-auto.mb-3
+							a.btn.btn-outline-danger.btn-block(href="#") Получить консультацию!
+	// end m-whyAreWe

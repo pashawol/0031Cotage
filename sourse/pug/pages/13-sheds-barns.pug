@@ -1,0 +1,86 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sIcons/_sIcons.pug
+include ../blocks/sBanners/_sBanners.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sRews/_sRews.pug
+include ../blocks/sConsultation/_sConsultation.pug
+include ../blocks/m-headerBlock/_m-headerBlock.pug
+include ../blocks/m-catalog/_m-catalog.pug
+include ../blocks/m-whyAreWe/_m-whyAreWe.pug
+include ../blocks/sIcons2/_sIcons2.pug
+
+block variables
+	- let  mainPage= null
+block title
+	-
+		let title= 'Хозблоки и сараи'
+		
+		//- let catalogTitle= `Металлопрокат оптом и&nbsp;в&nbsp;розницу в&nbsp;наличии`
+
+		let subtitle= `Оптовая и&nbsp;розничная продажа хозблоков и&nbsp;сараев.`
+
+		let text= `Быстрое и&nbsp;надежное обустройство безопасного пространства. Хозяйственные блоки и&nbsp;сараи легко собираются. Практически не&nbsp;требуют ухода. Допускают многократную сборку. Устойчивы к&nbsp;природным осадкам и&nbsp;ветру. Компания Cottage-Online предлагает изделия ведущих производителей оптом и&nbsp;в&nbsp;розницу. <br>На&nbsp;все материалы действует гарантия. Сэкономьте на&nbsp;доставке и&nbsp;монтаже с&nbsp;нашей помощью! Получите ответ на&nbsp;все вопросы и&nbsp;предварительный расчет у&nbsp;нашего консультанта. Оформите заявку на&nbsp;сайте, специалист свяжется с&nbsp;вами в&nbsp;течение 15&nbsp;минут!`
+
+		let img= `002-home.svg`
+
+		//- var items= {
+		//- 	'rebar.png':'Арматура',
+		//- 	'angle.png':'Уголок',
+		//- 	'channel.png':'Швеллер',
+		//- 	'strip.png':'Полоса',
+		//- 	'shaped-tube.png':'Труба профильная',
+		//- 	'flat-stock.png':'Листовой прокат',
+		//- 	'circle.png':'Круг',
+		//- 	'square.png':'Квадрат',
+		//- 	'rails.png':'Рельсы',
+		//- 	'stainless.png':'Нержавеющий прокат'
+		//- 	}
+		let items2= [
+			[
+			`sheds-greenStorage.png`,
+			`Металлические хозблоки GreenStorage`,
+			`btnRed`,
+			`Металлические сараи ведущего отечественного производителя. Профили изготовлены из&nbsp;стойкого к&nbsp;коррозии и&nbsp;внешним воздействиям оцинкованного металла. Собираются из&nbsp;глубоко профилированного стального листа. Материал проходит покраску несколькими слоями в&nbsp;горячем растворе. Гарантия производителя от&nbsp;ржавления составляет 10&nbsp;лет.`,	
+			],
+
+			[
+			`sheds-WPC.png`,
+			`Пластиковые сараи и сараи из ДПК`,
+			`btnRed`,
+			`Оптимальное решение для устройства рабочего пространства, а&nbsp;также хранения прихотливых к&nbsp;влаге материалов на&nbsp;вашем участке. Бокс легко собирается, выдерживает перепады температур от &minus;40&ordm; до&nbsp;+70&ordm;, не&nbsp;боится природных осадков.`,
+			`Состав изделия безопасен для детей, животных и&nbsp;окружающей среды. Сараи из&nbsp;пластика и&nbsp;ДПК&nbsp;&mdash; удобство и&nbsp;надежность за&nbsp;доступные деньги!`
+			]
+		]
+
+	title= title
+block pagecontent
+
+	//- +mob-mnu()
+	+topLine() 
+	+top-nav()
+	+m-headerBlock({
+		title,
+		subtitle,
+		text,
+		img
+	})
+	//- +m-catalog(items, catalogTitle)
+	+m-catalog2('Хозблоки и&nbsp;сараи по&nbsp;низким ценам', items2)
+	+m-whyAreWe(`Почему покупатели выбирают нас?`,`warehouse.png`,`- Поставка материалов строго по&nbsp;ГОСТ;`,`- Подбор и&nbsp;консультация клиентов бесплатно;`,`- Доступные цены при любом объеме закупок;`,`- Сопутствующая документация;`,`- Гарантия на&nbsp;материалы;`,`- Удобные способы оплаты;`,`- Поставка быстро и&nbsp;в&nbsp;срок;`,`- Контроль качества хранения продукции.`).bg-color
+	//- +headerBlock()
+	+sIcons2
+	//- +sContent().bg-color
+	//- +sCatalog
+	//- +sBanners
+	//- +sContent2().bg-color
+	//- +sRews
+	//- +sContent3().bg-color
+	//- +sConsultation
+	+footer()
+
+
+	

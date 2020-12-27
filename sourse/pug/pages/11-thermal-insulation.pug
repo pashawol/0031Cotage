@@ -1,0 +1,63 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sIcons/_sIcons.pug
+include ../blocks/sBanners/_sBanners.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sRews/_sRews.pug
+include ../blocks/sConsultation/_sConsultation.pug
+include ../blocks/m-headerBlock/_m-headerBlock.pug
+include ../blocks/m-catalog/_m-catalog.pug
+include ../blocks/m-whyAreWe/_m-whyAreWe.pug
+include ../blocks/sIcons2/_sIcons2.pug
+
+block variables
+	- let  mainPage= null
+block title
+	-
+		let title= 'Теплоизоляция'
+		
+		//- let catalogTitle= `Поликарбонат всегда в&nbsp;наличии`
+
+		let subtitle= `Оптовая и&nbsp;розничная продажа материалов для теплоизоляции.`
+
+		let text= `Предлагаем широкий выбор теплоизоляционных материалов по ценам производителя. Строительные, технические и специальные утеплители. Изделия и составы, применяемые в строительстве, трубопроводных работах, корпусах и ограждающих конструкциях. Закажите теплоизоляцию в компании Cottage-Online. экономьте время и бюджет, поручив работы по доставке и монтажу утеплителей нашим специалистам. На все материалы и услуги действует гарантия. Задайте вопрос консультанту и получите предварительный расчет бесплатно.`
+
+		let img= `004-insulating-tape.svg`
+
+		//- var items= {
+		//- 	'poly-mono.png':'Монолитный',
+		//- 	'poly-cell.png':'Сотовый',
+		//- 	'poly-profiled.png':'Профилированный',
+		//- 	'poly-complect.png':`Комплектующие для поликарбоната`
+		//- 	}
+
+	title= title
+block pagecontent
+
+	//- +mob-mnu()
+	+topLine() 
+	+top-nav()
+	+m-headerBlock({
+		title,
+		subtitle,
+		text,
+		img
+	})
+	//- +m-catalog(items, catalogTitle)
+	+m-whyAreWe(`Почему клиенты выбирают сотрудничество с&nbsp;Cottage-Online`,`shop.png`,`- Поставка материалов строго по&nbsp;ГОСТ;`,`- Подбор и&nbsp;консультация клиентов бесплатно;`,`- Доступные цены при любом объеме закупок;`,`- Сопутствующая документация;`,`- Гарантия на&nbsp;материалы;`,`- Удобные способы оплаты;`,`- Поставка быстро и&nbsp;в&nbsp;срок;`,`- Контроль качества хранения продукции.`).bg-color
+	//- +headerBlock()
+	+sIcons2
+	//- +sContent().bg-color
+	//- +sCatalog
+	//- +sBanners
+	//- +sContent2().bg-color
+	//- +sRews
+	//- +sContent3().bg-color
+	//- +sConsultation
+	+footer()
+
+
+	
