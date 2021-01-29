@@ -1,0 +1,42 @@
+mixin card-top(data)
+	// start card-top
+	.container
+		+b.card-top#card-top&attributes(attributes)
+			.row
+				.col-lg-5
+					.row
+						.col-4
+							- for (var x = 0; x < 3; x++)
+								+e.img-wrap--sm(href="img/@2x/window-2.png" data-fancybox="gal")
+									img(src="img/@2x/window-2.png", alt="")
+						.col-8
+							+e.img-wrap--lg(href="img/@2x/windiow-1.png" data-fancybox="gal")
+								img(src="img/@2x/windiow-1.png", alt="")
+								+e.discount-img(src="img/@2x/percent.png", alt="")
+				.col-lg-7
+					+e.description
+						+e.descr-head
+							+e.H4.title Мансардное окно Velux
+							+e.presence Наличие: 
+								span под заказ
+							+e.vendor Производитель: 
+								span Velux
+							+e.price Цена: 
+								span.old 1000&nbsp;руб. 
+								span.new 500&nbsp;руб.
+						+e.descr-bottom
+							+e.price-valid Акционная цена действует:
+							+b.clock
+								+e.item
+									+e.time 12
+									+e.descr часы
+								+e.item
+									+e.time 08
+									+e.descr мин
+								+e.item
+									+e.time 02
+									+e.descr сек
+							a.btn.btn-danger.btn-block Оставить заявку
+
+
+	// end card-top

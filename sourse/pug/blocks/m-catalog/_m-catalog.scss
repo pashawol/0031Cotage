@@ -2,7 +2,7 @@
 	// start .m-catalog
 	.m-catalog {
 
-		--sPB: #{rem(0)};
+		--sPB: #{rem(20)};
 
 		@include media-breakpoint-down(xl) {
 			padding-top: rem(25);
@@ -25,9 +25,9 @@
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
-			margin-bottom: rem(47);
+			margin-bottom: rem(30);
 			@include media-breakpoint-down(lg) {
-				margin-bottom: rem(25);
+				margin-bottom: rem(20);
 			}
 
 			img{

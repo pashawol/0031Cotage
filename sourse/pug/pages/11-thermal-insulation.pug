@@ -27,12 +27,12 @@ block title
 
 		let img= `004-insulating-tape.svg`
 
-		//- var items= {
-		//- 	'poly-mono.png':'Монолитный',
-		//- 	'poly-cell.png':'Сотовый',
-		//- 	'poly-profiled.png':'Профилированный',
-		//- 	'poly-complect.png':`Комплектующие для поликарбоната`
-		//- 	}
+		var items= {
+			'thermal-2.jpg':'',
+			'thermal-1.jpg':'',
+			'thermal-3.jpg':'',
+			'thermal-4.jpg':``
+			}
 
 	title= title
 block pagecontent
@@ -46,7 +46,7 @@ block pagecontent
 		text,
 		img
 	})
-	//- +m-catalog(items, catalogTitle)
+	+m-catalog(items)
 	+m-whyAreWe(`Почему клиенты выбирают сотрудничество с&nbsp;Cottage-Online`,`shop.png`,`- Поставка материалов строго по&nbsp;ГОСТ;`,`- Подбор и&nbsp;консультация клиентов бесплатно;`,`- Доступные цены при любом объеме закупок;`,`- Сопутствующая документация;`,`- Гарантия на&nbsp;материалы;`,`- Удобные способы оплаты;`,`- Поставка быстро и&nbsp;в&nbsp;срок;`,`- Контроль качества хранения продукции.`).bg-color
 	//- +headerBlock()
 	+sIcons2

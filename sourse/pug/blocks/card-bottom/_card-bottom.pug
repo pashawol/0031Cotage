@@ -1,0 +1,54 @@
+mixin card-bottom(data)
+	// start card-bottom
+	+b.card-bottom#card-bottom&attributes(attributes)
+		.container
+			+b.tabs
+				+e.caption
+					+e.btn 
+						span Описание
+					+e.btn.active
+						span Характеристики
+					+e.btn 
+						span Видео
+					+e.btn 
+						span Документы
+				+e.wrap
+					+e.content
+						+e.item Производитель: 1
+						+e.item Страна производитель: 1
+						+e.item Класс износостойкости: 1
+						+e.item Ширина: 1
+						+e.item Длина: 1
+						+e.item Толщина: 1
+						+e.item Наличие фаски: 1
+						+e.item Покрываемая пачкой площадь: 1
+					+e.content.active
+						+e.item Производитель: 
+						+e.item Страна производитель:
+						+e.item Класс износостойкости:
+						+e.item Ширина:
+						+e.item Длина:
+						+e.item Толщина:
+						+e.item Наличие фаски:
+						+e.item Покрываемая пачкой площадь:
+					+e.content
+						+e.item Производитель: 2
+						+e.item Страна производитель: 2
+						+e.item Класс износостойкости: 2
+						+e.item Ширина: 2
+						+e.item Длина: 2
+						+e.item Толщина: 2
+						+e.item Наличие фаски: 2
+						+e.item Покрываемая пачкой площадь: 2
+					+e.content
+						+e.item Производитель: 3
+						+e.item Страна производитель: 3
+						+e.item Класс износостойкости: 3
+						+e.item Ширина: 3
+						+e.item Длина: 3
+						+e.item Толщина: 3
+						+e.item Наличие фаски: 3
+						+e.item Покрываемая пачкой площадь: 3
+					
+					
+	// end card-bottom

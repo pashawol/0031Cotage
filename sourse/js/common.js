@@ -160,7 +160,7 @@ function eventHandler() {
 	// JSCCommon.CustomInputFile(); 
 	var x = window.location.host;
 	let screenName;
-	screenName = 'main.jpg';
+	screenName = 'card.png';
 	if (screenName && x === "localhost:3000") {
 		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
@@ -211,6 +211,33 @@ function eventHandler() {
 			prevEl: '.sRews__slider--js .swiper-button-prev',
 		},
 	});
+	const swiper5 = new Swiper('.card-top__gallery', {
+		// slidesPerView: 5,
+		...defaultSl,
+		slidesPerView: 1,		
+	});
+
+	var galleryThumbs = new Swiper('.card-top__gallery-thumbs', {
+		spaceBetween: 15,
+		direction: 'vertical',
+		slidesPerView: 3,
+		slidesPerView: 'auto',
+		freeMode: true,
+		watchSlidesVisibility: true,
+		watchSlidesProgress: true,
+  });
+  var gallery = new Swiper('.card-top__gallery', {
+		spaceBetween: 0,
+		lazy: {
+			loadPrevNext: true,
+		},
+		watchOverflow: true,
+		loop: true,
+		thumbs: {
+			 swiper: galleryThumbs
+		}
+  });
+
 	// modal window
 	$('img.img-svg, .menu-image').each(function () {
 		var $img = $(this);

@@ -2,17 +2,19 @@ mixin m-catalog(items, catalogTitle)
 	// start m-catalog
 	+b.SECTION.m-catalog.section#m-catalog&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2!= catalogTitle
+			if catalogTitle
+				+b.section-title.text-center
+					h2!= catalogTitle
 			.row
 				mixin item(i, t)
 					+e.col.col-lg-6
 						+e.item.bg-wrap
 							+pic(i,'bg',0).picture-bg
-							+e.title= t
-							a.btn.btn-outline-success(href="#")
-								+icon("right-arrow")
-								| Смотреть
+							if t
+								+e.title= t
+								a.btn.btn-outline-success(href="#")
+									+icon("right-arrow")
+									| Смотреть
 				each titile, image in items
 					+item(image, titile)
 	// end m-catalog
@@ -43,4 +45,19 @@ mixin m-catalog2(title, items)
 								| Оформить заказ
 			each item in items
 				+item(...item)
+	// end m-catalog
+
+mixin m-catalog3(data)
+	// start m-catalog
+	+b.SECTION.m-catalog.section#m-catalog&attributes(attributes)
+		.container
+			.row
+				mixin item(i)
+					+e.col.col-lg-6
+						+e.item.bg-wrap
+							+pic(i,'bg',0).picture-bg
+				+item('thermal-2.jpg')
+				+item('thermal-1.jpg')
+				+item('thermal-3.jpg')
+				+item('thermal-4.jpg')
 	// end m-catalog

@@ -162,7 +162,7 @@ var JSCCommon = {
 var $ = jQuery;
 
 function eventHandler() {
-	var _defaultSl;
+	var _defaultSl, _Swiper;
 
 	JSCCommon.ifie();
 	JSCCommon.modalCall();
@@ -172,7 +172,7 @@ function eventHandler() {
 
 	var x = window.location.host;
 	var screenName;
-	screenName = 'main.jpg';
+	screenName = 'card.png';
 
 	if (screenName && x === "localhost:3000") {
 		document.body.insertAdjacentHTML("beforeend", "<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
@@ -207,7 +207,26 @@ function eventHandler() {
 			nextEl: '.sRews__slider--js .swiper-button-next',
 			prevEl: '.sRews__slider--js .swiper-button-prev'
 		}
-	})); // modal window
+	}));
+	var swiper5 = new Swiper('.card-top__gallery', _objectSpread(_objectSpread({}, defaultSl), {}, {
+		slidesPerView: 1
+	}));
+	var galleryThumbs = new Swiper('.card-top__gallery-thumbs', (_Swiper = {
+		spaceBetween: 15,
+		direction: 'vertical',
+		slidesPerView: 3
+	}, _defineProperty(_Swiper, "slidesPerView", 'auto'), _defineProperty(_Swiper, "freeMode", true), _defineProperty(_Swiper, "watchSlidesVisibility", true), _defineProperty(_Swiper, "watchSlidesProgress", true), _Swiper));
+	var gallery = new Swiper('.card-top__gallery', {
+		spaceBetween: 0,
+		lazy: {
+			loadPrevNext: true
+		},
+		watchOverflow: true,
+		loop: true,
+		thumbs: {
+			swiper: galleryThumbs
+		}
+	}); // modal window
 
 	$('img.img-svg, .menu-image').each(function () {
 		var $img = $(this);

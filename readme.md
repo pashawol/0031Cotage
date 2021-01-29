@@ -13,3 +13,4 @@
 1. <https://pashawol.github.io/0031Cotage/public/12-christmas-goods.html>
 1. <https://pashawol.github.io/0031Cotage/public/13-sheds-barns.html>
 1. <https://pashawol.github.io/0031Cotage/public/14-drainage-systems.html>
+1. <https://pashawol.github.io/0031Cotage/public/15-card.html>

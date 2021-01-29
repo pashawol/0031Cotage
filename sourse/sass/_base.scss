@@ -475,3 +475,14 @@ iframe {
 	display: block;
 	width: 100%;
 }
+
+.page-head {
+	padding: rem(28) 0;
+	@include media-breakpoint-down(lg) {
+		padding: rem(18) 0;
+	}
+	@include media-breakpoint-down(sm) {
+		padding-top: rem(5);
+	}
+
+}
